@@ -15,3 +15,10 @@ Trainer::Trainer() {
 Trainer::~Trainer() {
 	// TODO Auto-generated destructor stub
 }
+
+Pokemon *Trainer::sendOut()
+{
+
+}
+
+

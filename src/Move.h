@@ -13,7 +13,8 @@
 
 using namespace std;
 
-class Move {
+class Move{
+
 	int baseDamage;
 	Type::Type typing;
 	string Name;
@@ -21,14 +22,17 @@ class Move {
 
 
 public:
+
 	Move();
 
-	virtual void BeforeCalcDamage();
-	virtual void OnSuccessfulHit();
 
-
+	void BeforeCalcDamage();
+	void OnSuccessfulHit();
 
 	virtual ~Move();
+
+	//Beginning of header definitions.
+
     void setBaseDamage(int baseDamage)
     {
         this->baseDamage = baseDamage;

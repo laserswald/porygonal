@@ -1,19 +1,17 @@
 /*
- * Move.cpp
+ * Team.cpp
  *
- *  Created on: Jul 5, 2011
+ *  Created on: Jul 8, 2011
  *      Author: ben
  */
 
-#include "Move.h"
+#include "Team.h"
 
-Move::Move() {
+Team::Team() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Move::~Move() {
+Team::~Team() {
 	// TODO Auto-generated destructor stub
 }
-
-

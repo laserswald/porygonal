@@ -8,12 +8,39 @@
 #ifndef TRAINER_H_
 #define TRAINER_H_
 
-#include "Pokemon.h"
+#include "Team.h"
 
 class Trainer {
+	string className;
+	string name;
+	Team party;
 public:
 	Trainer();
 	virtual ~Trainer();
+
+	Pokemon* sendOut();
+
+	string getName()
+	{
+		return name;
+	}
+
+	string getTrainerClassName()
+	{
+		return className;
+	}
+
+	void setName(string repl)
+	{
+		name = repl;
+	}
+
+	void setTrainerClassName(string repl)
+	{
+		className = repl;
+	}
+
+
 };
 
 #endif /* TRAINER_H_ */

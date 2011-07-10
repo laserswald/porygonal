@@ -35,6 +35,8 @@ class Pokemon {
 	int indVals[6];
 	Type::Type types[2];
 	string Name;
+	bool knockedOut;
+	int currentHP;
 
 public:
     Pokemon(int Species);
@@ -46,6 +48,8 @@ public:
     void performAttack(int attackNum, Pokemon *target);
 
     int calculateStat(Stat theStat);
+
+    void recieveRawDamage(int damage);
 
     int getLevel();
 
@@ -130,9 +134,13 @@ public:
         stats[specified] = value;
     }
 
-    string getName();
+    string getName(){
+    	return Name;
+    }
 
-    void setNickname(string nick);
+    void setNickname(string nick){
+    	Name = nick;
+    }
 
 };
 

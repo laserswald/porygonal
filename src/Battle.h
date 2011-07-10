@@ -11,6 +11,7 @@
 #include "Trainer.h"
 #include "Pokemon.h"
 
+
 enum Weather{
 	NoWeather = 0,
 	Rain,
@@ -21,10 +22,11 @@ enum Weather{
 
 class Battle {
 private:
-	Trainer trainer1;
-	Trainer trainer2;
+	Trainer* trainer1;
+	Trainer* trainer2;
 	Pokemon* t1poke;
 	Pokemon* t2poke;
+	Move* currentMove;
 
 	void executeTurn();
 
@@ -33,7 +35,9 @@ public:
 	Battle(Trainer* challenger);
 	virtual ~Battle();
 	Weather currentWeather;
-	int CalculateDamage();
+	int CalculateDamage(Move* move, Pokemon* target);
+	void Begin();
+	void Loop();
 
 };
 

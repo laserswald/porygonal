@@ -10,6 +10,7 @@
 
 int main(int argc, char* argv[]){
 	Pokemon Gyarados(128);
+	Gyarados.setNickname("Gyarados");
 	Gyarados.setTypes(Type::Water, Type::Flying);
 
 	Pokemon Venusaur(3);
@@ -18,7 +19,7 @@ int main(int argc, char* argv[]){
 	Move surf;
 	surf.setBaseDamage(80);
 	surf.setTyping(Type::Water);
-	surf.setName("Splash");
+	surf.setName("Surf");
 
 
 	Gyarados.setMove(0, &surf);
