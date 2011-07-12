@@ -12,6 +12,7 @@
 #include "Pokemon.h"
 
 
+
 enum Weather{
 	NoWeather = 0,
 	Rain,
@@ -28,11 +29,13 @@ private:
 	Pokemon* t2poke;
 	Move* currentMove;
 
+
+	bool hasEnded;
+
 	void executeTurn();
 
 public:
 	Battle(Trainer* player, Trainer* challenger);
-	Battle(Trainer* challenger);
 	virtual ~Battle();
 	Weather currentWeather;
 	int CalculateDamage(Move* move, Pokemon* target);

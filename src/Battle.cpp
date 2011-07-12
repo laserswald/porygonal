@@ -14,9 +14,6 @@ Battle::Battle(Trainer* player, Trainer* challenger)
 	Begin();
 }
 
-Battle::Battle(Trainer* challenger){
-
-}
 
 Battle::~Battle() {
 	// TODO Auto-generated destructor stub
@@ -63,7 +60,9 @@ void Battle::Begin(){
 
 void Battle::Loop()
 {
-	cout << "What will " << t1poke->getName() << " do?" << endl;
+	while (hasEnded != true){
+		cout << "What will " << t1poke->getName() << " do?" << endl;
+	}
 }
 
 

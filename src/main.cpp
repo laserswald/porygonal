@@ -7,8 +7,8 @@
 
 #include "Battle.h"
 
-
 int main(int argc, char* argv[]){
+
 	Pokemon Gyarados(128);
 	Gyarados.setNickname("Gyarados");
 	Gyarados.setTypes(Type::Water, Type::Flying);
