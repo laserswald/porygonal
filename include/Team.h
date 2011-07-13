@@ -8,10 +8,11 @@
 #ifndef TEAM_H_
 #define TEAM_H_
 
+#include <vector>
 #include "Pokemon.h"
 
 class Team {
-	Pokemon party[6];
+	vector<Pokemon> party[6];
 public:
 	//constructors and destructors
 	Team();
