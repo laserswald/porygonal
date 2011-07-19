@@ -12,12 +12,17 @@
 #include "Pokemon.h"
 
 class Team {
-	vector<Pokemon> party[6];
+	vector<Pokemon> party;
 public:
 	//constructors and destructors
 	Team();
 	virtual ~Team();
 
+	void loadPartyfromString(char* string);
+	char* exportToString();
+	int getPartySize();
+	void addPokemon(Pokemon* poke);
+	Pokemon* getPokemon(int which);
 
 };
 

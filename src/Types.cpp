@@ -5,7 +5,7 @@
  *      Author: ben
  */
 
-#import "Types.h"
+#include "Types.h"
 
 
 float Type::match(Type attackType, Type defendingType1, Type defendingType2)

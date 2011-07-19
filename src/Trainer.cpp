@@ -12,13 +12,25 @@ Trainer::Trainer() {
 
 }
 
+Trainer::Trainer(string TrainerClass, string name)
+{
+	className = TrainerClass;
+	name = name;
+}
+
 Trainer::~Trainer() {
 	// TODO Auto-generated destructor stub
 }
 
-Pokemon *Trainer::sendOut()
-{
+void Trainer::addPokemon(Pokemon* poke){
+	if (party.size() < 6){
+		party.push_back(poke);
+	}
+}
 
+Pokemon* Trainer::sendOut()
+{
+	return party[0];
 }
 
 

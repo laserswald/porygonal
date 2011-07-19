@@ -13,11 +13,14 @@
 class Trainer {
 	string className;
 	string name;
-	Team party;
+	vector<Pokemon*> party;
 public:
 	Trainer();
+	Trainer(string TrainerClass, string name);
 	virtual ~Trainer();
 
+	void addParty(Team team);
+	void addPokemon(Pokemon* poke);
 	Pokemon* sendOut();
 
 	string getName()

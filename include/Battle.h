@@ -10,6 +10,7 @@
 
 #include "Trainer.h"
 #include "Pokemon.h"
+#include "BattleOutput.h"
 
 
 
@@ -28,14 +29,14 @@ private:
 	Pokemon* t1poke;
 	Pokemon* t2poke;
 	Move* currentMove;
-
+	BattleOutput* output;
 
 	bool hasEnded;
 
 	void executeTurn();
 
 public:
-	Battle(Trainer* player, Trainer* challenger);
+	Battle(Trainer* player, Trainer* challenger, BattleOutput* bo);
 	virtual ~Battle();
 	Weather currentWeather;
 	int CalculateDamage(Move* move, Pokemon* target);

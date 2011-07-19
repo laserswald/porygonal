@@ -7,7 +7,7 @@
 
 #include "Battle.h"
 
-Battle::Battle(Trainer* player, Trainer* challenger)
+Battle::Battle(Trainer* player, Trainer* challenger, BattleOutput* bo)
 {
 	// TODO Auto-generated constructor stub
 	trainer1 = player; trainer2 = challenger;
@@ -26,17 +26,17 @@ int Battle::CalculateDamage(Move* move, Pokemon* target){
 		effectiveMultiplier = Type::match(move->getTyping(), target->getPrimaryType(), target->getSecondaryType());
 
 		if (effectiveMultiplier > 1) {
-			cout << "It's super effective!" << endl;
+			output->printBattleEvent("It's super effective!/n");
 		}
 		if (effectiveMultiplier == 0) {
-			cout << "It didn't affect foe " << target->getName() << "..." << endl;
+			output->printBattleEvent("It had no effect./n");
 		}
 		if (effectiveMultiplier < 1) {
-			cout << "It's not very effective." << endl;
+			output->printBattleEvent("It's not very effective.");
 		}
 	}else{
 		//OH GOD IT'S SPLASH
-		cout << "But nothing happened." << endl;
+		output->printBattleEvent("But nothing happened./n");
 	}
 	int damage = move->getBaseDamage() * effectiveMultiplier;
 	return damage;

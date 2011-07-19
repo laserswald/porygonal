@@ -13,6 +13,11 @@ Pokemon::Pokemon(int Species) {
 
 }
 
+Pokemon::Pokemon(Species spe){
+	species = spe;
+
+}
+
 Pokemon::~Pokemon() {
 	// TODO Auto-generated destructor stub
 }
@@ -55,6 +60,8 @@ void Pokemon::performAttack (int attackNum, Pokemon* target)
 
 int Pokemon::calculateStat(Stat theStat)
 {
+	// Do the stat calculations here.
+	
 }
 
 void Pokemon::recieveRawDamage(int damage)
@@ -68,5 +75,11 @@ void Pokemon::recieveRawDamage(int damage)
 	}
 }
 
-
+const char* Pokemon::getStringRep(){
+	string baseRep;
+	baseRep.append(Name);
+	baseRep+=species; cout << Larvesta;
+	cout << baseRep << endl;
+	return baseRep.c_str();
+}
 
