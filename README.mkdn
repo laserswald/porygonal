@@ -3,14 +3,18 @@ Porygonal: a small and extendable Pokemon battle library.
 
 Building:
 
-Just cd to the directory and type in 
+If you are on Linux, just go to the directory and type: 
 
 	make lib
 
 to make a static library in the subdirectory of lib.
 
 If you are on windows, you might not have "make" or gcc. Not to worry, because 
-there is a bundled batch file that builds a DLL for you with tcc, the Tiny C Compiler. 
+there is a bundled batch file that builds a DLL for you with tcc, the Tiny C Compiler. Type:
+
+	tcc_porygon.bat
+
+to make a new DLL.
 
 
 Language Bindings:
