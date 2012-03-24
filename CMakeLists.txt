@@ -1,0 +1,5 @@
+set(CMAKE_C_COMPILER "tcc.exe")
+set(CMAKE_CXX_COMPILER "mingw32-g++.exe")
+project(porygonal)
+include_directories("include")
+add_library(porygonal src/move.c src/pokemon.c src/battle.c src/type.c src/pokeData.c src/moves/calculations.c src/moves/standard.c)
