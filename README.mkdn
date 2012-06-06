@@ -12,12 +12,13 @@ to make a static library in the subdirectory of lib.
 If you are on windows, you might not have "make" or gcc. Not to worry, because 
 there is a bundled batch file that builds a DLL for you with tcc, the Tiny C Compiler. Type:
 
-	tcc_porygon.bat
+	tcc_porygonal.bat
 
 to make a new DLL.
 
+You can go grab TCC at [it's website][tinycc.org]. It's really useful for flash drives and such.
 
-Language Bindings:
+##Language Bindings:
 
 porygonal can be used by any language that can call C functions. I will start making bindings to 
 other popular languages (Lua, Python, Perl) as soon as I get a stable code base.
